@@ -1,0 +1,37 @@
+
+.standard-footer {
+  width: 100%;
+  text-align: center;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  flex-direction: column
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-media > a{
+  margin: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .information{
+    flex: 3 1;
+    padding-left: 0em;
+
+  }
+
+  .information > .information-wrapper {
+    text-align: center;
+  }
+
+  .bubbles{
+    flex: 4 1;
+  }
+}

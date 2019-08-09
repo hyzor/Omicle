@@ -1,0 +1,62 @@
+[
+    {
+        "name": "ALMI",
+        "link": "https://www.almi.se/",
+        "img": "https://omicle.se/assets/partners/almi.png"
+    },
+    {
+        "name": "Erasmus for Young Entrepreneurs",
+        "link": "/assets/img/EU.png",
+        "img": "https://omicle.se/assets/partners/EU.jpg"
+    },
+    {
+        "name": "Handelsbanken Innovation Foundation",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/handelsbanken.png"
+    },
+    {
+        "name": "KTH innovation",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/kth.png"
+    },
+    {
+        "name": "Stockholm School of Entrepreneurship",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/SSE.png"
+    },
+    {
+        "name": "Sting Stockholm",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/Sting.png"
+    },
+    {
+        "name": "Tillväxverket",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/Tillv.png"
+    },
+    {
+        "name": "Uppsala innovation centre",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/UIC.jpg"
+    },
+    {
+        "name": "Uppsala University",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/UU.png"
+    },
+    {
+        "name": "UU innovation",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/uuinnovation.png"
+    },
+    {
+        "name": "Vinnova",
+        "link": "/assets/img/EU.png",
+        "img":  "https://omicle.se/assets/partners/vinnova.png"
+    },
+    {
+        "name": "Sun Labs",
+        "link": "/assets/img/SL.png",
+        "img":  "https://omicle.se/assets/partners/SL.png"
+    }
+]

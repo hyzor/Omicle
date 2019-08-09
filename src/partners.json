@@ -1,0 +1,57 @@
+[
+    {
+        "name": "ALMI",
+        "link": "/assets/EU.png",
+        "img": "http://localhost:3000/assets/almi.png"
+    },
+    {
+        "name": "Erasmus for Young Entrepreneurs",
+        "link": "/assets/EU.png",
+        "img": "http://localhost:3000/assets/EU.jpg"
+    },
+    {
+        "name": "Handelsbanken Innovation Foundation",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/handelsbanken.png"
+    },
+    {
+        "name": "KTH innovation",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/kth.png"
+    },
+    {
+        "name": "Stockholm School of Entrepreneurship",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/SSE.png"
+    },
+    {
+        "name": "Sting Stockholm",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/String.png"
+    },
+    {
+        "name": "Tillväxverket",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/Tillv.png"
+    },
+    {
+        "name": "Uppsala innovation centre",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/UIC.png"
+    },
+    {
+        "name": "Uppsala University",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/UU.png"
+    },
+    {
+        "name": "UU innovation",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/uuinnovation.png"
+    },
+    {
+        "name": "Vinnova",
+        "link": "/assets/EU.png",
+        "img":  "http://localhost:3000/assets/vinnova.png"
+    }
+]
