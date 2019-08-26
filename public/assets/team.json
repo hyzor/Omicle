@@ -1,7 +1,11 @@
 [
     {   "name":"Satya Vrat Shukla",
-        "title": "Founder",
+        "title": "Master's student",
         "img": "https://omicle.se/assets/team/satya.jpg"
+    },
+    {   "name":"Jesper Hansson Falkenby",
+        "title": "Founder",
+        "img": "https://omicle.se/assets/team/jesper.png"
     },
     {   "name":"Sheng Leslie",
         "title": "Founder",
