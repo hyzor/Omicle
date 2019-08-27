@@ -95,6 +95,7 @@
     "jest-environment-jsdom-fourteen": "0.1.0",
     "jest-resolve": "24.8.0",
     "jest-watch-typeahead": "0.3.1",
+    "lint-staged": "^9.2.5",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-normalize": "7.0.1",
