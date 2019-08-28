@@ -1,14 +1,13 @@
-
-.header.true{
+.header.true {
   background-color: rgba(255, 255, 255, 0);
   filter: invert(100%);
 }
 
-.header.false{
+.header.false {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.content-box{
+.content-box {
   margin: 0em 5%;
 }
 
@@ -23,6 +22,7 @@ li > p {
 
 .header {
   position: fixed;
+  height: 90px;
   width: 100%;
   z-index: 3;
   display: flex;
@@ -62,14 +62,14 @@ li > p {
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height .2s ease-out;
+  transition: max-height 0.2s ease-out;
 }
 
 .header.true .menu {
   background-color: rgba(255, 255, 255, 0);
 }
 
-.header.false .menu{
+.header.false .menu {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -89,7 +89,7 @@ li > p {
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
+  transition: background 0.2s ease-out;
   width: 18px;
 }
 
@@ -100,7 +100,7 @@ li > p {
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 
@@ -160,9 +160,9 @@ li > p {
 
 @media (max-width: 750px) {
   .header .menu {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 3.5em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3.5em;
   }
 }

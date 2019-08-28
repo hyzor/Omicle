@@ -11,6 +11,11 @@ import CountUp from 'react-countup';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import { SocialIcon } from 'react-social-icons';
 
+// Material UI
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+
 import Section from './components/section';
 import Footer from './components/footer';
 
@@ -121,20 +126,17 @@ class landingPage extends Component {
             <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon" />
             </label>
-            <ul className="menu">
-              <li>
-                <p onClick={() => scrollToComponent(this.footerDiv)} aria-hidden="true">
-                  Contact us
-                </p>
-              </li>
-              {/* <li><p href='#about'>blog</p></li> */}
-            </ul>
+            <Box className="menu" marginRight="16px">
+              <Button variant="outlined" onClick={() => scrollToComponent(this.footerDiv)}>
+                Contact us
+              </Button>
+            </Box>
           </div>
         </header>
         <div className="page-content">
           <Section className="flex-parent camo" style={{ minHeight: '90vh' }}>
             <div className="headliner">
-              <h1 className="heading flex-parent">Optimization is at the heart of what we do.</h1>
+              <Typography variant="h3">Optimization is at the heart of what we do.</Typography>
             </div>
           </Section>
           <div className="arrow-container">
@@ -142,9 +144,9 @@ class landingPage extends Component {
           </div>
           <Section className="flex-parent cash-savings" style={{ minHeight: '70vh' }}>
             <div className="half-child center">
-              <h1 style={{ maxWidth: '75%' }} className="heading">
+              <Typography variant="h2" style={{ maxWidth: '75%' }}>
                 Pilot test at Ekonomikum Uppsala University suggests 2/3 collection time saved.
-              </h1>
+              </Typography>
             </div>
             <div className="half-child">
               <div className="numbers">
@@ -265,7 +267,9 @@ class landingPage extends Component {
             />
             <div className="mobile-container">
               <div className="half-child headliner">
-                <h1 className="heading flex-parent">Route optimization at your service.</h1>
+                <Typography variant="h2" style={{ marginLeft: '32px' }}>
+                  Route optimization at your service.
+                </Typography>
               </div>
               <div className="half-child flex-parent">
                 <img src={phoneDemo} alt="Demo of the app" className="phone-demo" />
@@ -273,9 +277,9 @@ class landingPage extends Component {
             </div>
           </Section>
           <Section className="flex-parent column features" style={{ justifyContent: 'flex-start' }}>
-            <h1 className="heading" style={{ padding: '1em' }}>
+            <Typography variant="h2" style={{ padding: '1em' }}>
               Omicle Advantages
-            </h1>
+            </Typography>
             <div className="grid-parent">
               <div className="grid-child feature ">
                 <div className="logo-container">
@@ -332,7 +336,7 @@ class landingPage extends Component {
               className="flex-parent column partners"
               style={{ justifyContent: 'flex-start' }}
             >
-              <h1 className="heading">Partnerships built on trust</h1>
+              <Typography variant="h2">Partnerships built on trust</Typography>
               <div className="grid-parent">
                 {partners.map((partner, i) => {
                   return (
@@ -351,7 +355,9 @@ class landingPage extends Component {
               <div className="section bg-static">
                 <div className="bg-move" style={{ backgroundImage: `url(${TRUCK})` }} />
               </div>
-              <h1 className="heading">Meet the team</h1>
+              <Typography variant="h2" style={{ marginBottom: '64px' }}>
+                Meet the team
+              </Typography>
               <div className="grid-parent">
                 {team.map((profile, i) => {
                   return (
