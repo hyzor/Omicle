@@ -22,7 +22,6 @@ li > p {
 
 .header {
   position: fixed;
-  height: 90px;
   width: 100%;
   z-index: 3;
   display: flex;
@@ -65,6 +64,12 @@ li > p {
   transition: max-height 0.2s ease-out;
 }
 
+.header .menu-list {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
 .header.true .menu {
   background-color: rgba(255, 255, 255, 0);
 }
@@ -79,7 +84,7 @@ li > p {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 27px 20px;
   position: relative;
   user-select: none;
 }
@@ -122,6 +127,10 @@ li > p {
   max-height: 240px;
 }
 
+.header .menu-btn:checked ~ .menu-list {
+  max-height: 240px;
+}
+
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
@@ -141,7 +150,7 @@ li > p {
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 750px) {
   .header li {
     float: left;
   }
@@ -153,16 +162,36 @@ li > p {
     float: right;
     max-height: none;
   }
+  .header .menu-list {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
   .header .menu-icon {
     display: none;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 749px) {
   .header .menu {
     position: absolute;
     left: 0;
     right: 0;
     top: 3.5em;
+  }
+
+  .header .menu-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3.5em;
+  }
+
+  .header.false .menu-list {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .header.true .menu-list {
+    background-color: rgba(255, 255, 255, 0);
   }
 }

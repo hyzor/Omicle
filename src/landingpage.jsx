@@ -13,7 +13,6 @@ import { SocialIcon } from 'react-social-icons';
 
 // Material UI
 import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
 import Section from './components/section';
@@ -126,11 +125,13 @@ class landingPage extends Component {
             <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon" />
             </label>
-            <Box className="menu" marginRight="16px">
-              <Button variant="outlined" onClick={() => scrollToComponent(this.footerDiv)}>
-                Contact us
-              </Button>
-            </Box>
+            <ul className="menu-list">
+              <li style={{ padding: 0, margin: '24px' }}>
+                <Button variant="outlined" onClick={() => scrollToComponent(this.footerDiv)}>
+                  Contact us
+                </Button>
+              </li>
+            </ul>
           </div>
         </header>
         <div className="page-content">
