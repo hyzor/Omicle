@@ -394,8 +394,8 @@ class landingPage extends Component {
             <div className="information">
               <div className="information-wrapper">
                 <address>
-                  <Typography variant="h7">Klostergatan 10 c/o Base10</Typography>
-                  <Typography variant="h7">753 21 Uppsala</Typography>
+                  <Typography variant="body1">Klostergatan 10 c/o Base10</Typography>
+                  <Typography variant="body1">753 21 Uppsala</Typography>
                 </address>
                 <Typography variant="h6" className="email" style={{ marginTop: '16px' }}>
                   hello@omicle.com

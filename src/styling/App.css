@@ -4,12 +4,12 @@ body {
   margin: 0;
 }
 
-h1.heading{
+h1.heading {
   font-size: 3em;
   line-height: 1em;
 }
 
-h3.thin{
+h3.thin {
   font-weight: 200;
 }
 
@@ -37,6 +37,7 @@ li > h3 {
 }
 
 .information {
+  margin-top: 32px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -88,7 +89,7 @@ li > h3 {
 
 .page-content {
   flex: 1 1 auto;
-  position: relative;/* need this to position inner content */
+  position: relative; /* need this to position inner content */
   overflow-y: auto;
 }
 
@@ -118,14 +119,14 @@ li > h3 {
   cursor: pointer;
 }
 
-.flex-parent{
+.flex-parent {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.flex-parent.column{
+.flex-parent.column {
   flex-direction: column;
 }
 
@@ -133,7 +134,7 @@ ul {
   list-style-type: none;
 }
 
-ul.flex-parent{
+ul.flex-parent {
   justify-content: left;
 }
 
@@ -170,7 +171,7 @@ nav {
   background-size: 100% !important;
 }
 
-.mobile-container{
+.mobile-container {
   position: absolute;
   display: flex;
   align-items: center;
@@ -189,15 +190,15 @@ nav {
     margin-left: 0;
     align-self: flex-start;
   }
-  .flex-parent{
+  .flex-parent {
     flex-direction: column-reverse;
   }
 
-  .flex-parent.row{
-    flex-direction: row
+  .flex-parent.row {
+    flex-direction: row;
   }
 
-  .app .half-child{
+  .app .half-child {
     max-width: 90%;
   }
 
@@ -209,12 +210,12 @@ nav {
     background-size: 300% !important;
   }
 
-  .mobile-container{
+  .mobile-container {
     flex-direction: column-reverse;
   }
 }
 
-.content-box.nav{
+.content-box.nav {
   display: flex;
 }
 
@@ -223,11 +224,10 @@ nav {
 }
 
 @media only screen and (max-width: 340px) {
-  nav{
+  nav {
     font-size: 1em;
   }
 }
-
 
 .section {
   position: relative;
@@ -249,19 +249,19 @@ nav {
   max-height: 150px;
 }
 
-.arrow-container{
+.arrow-container {
   width: 100%;
   margin: 2em 0;
 }
 .scroll-down {
   bottom: 15px;
-	display: block;
-	text-align: center;
+  display: block;
+  text-align: center;
   font-size: 20px;
   margin: 0 auto;
-	z-index: 100;
-	text-decoration: none;
-	text-shadow: 0;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
   width: 13px;
   height: 13px;
   border-bottom: 2px solid black;
@@ -270,30 +270,91 @@ nav {
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
-	-webkit-animation: fade_move_down 4s ease-in-out infinite;
-	-moz-animation:    fade_move_down 4s ease-in-out infinite;
-  animation:         fade_move_down 4s ease-in-out infinite;
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
   align-self: flex-end;
 }
 
-
 /*animated scroll arrow animation*/
 @-webkit-keyframes fade_move_down {
-  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @-moz-keyframes fade_move_down {
-  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @keyframes fade_move_down {
-  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 
-
 /* Boilerplate for the font */
-h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1.5em; font-style: normal; font-variant: normal; font-weight: 500; line-height: 1.5em; } p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+h3 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+blockquote {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+pre {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
