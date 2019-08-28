@@ -152,11 +152,11 @@ class landingPage extends Component {
               <div className="numbers">
                 <ul className="flex-parent row">
                   <li>
-                    <h3>Route A</h3>
-                    <h3>1350 miles</h3>
+                    <Typography variant="h4">Route A</Typography>
+                    <Typography variant="h4">1350 miles</Typography>
                   </li>
                   <li>
-                    <h3 style={{ color: '#72C396' }}>
+                    <Typography variant="h4" style={{ color: '#72C396' }}>
                       {' '}
                       <CountUp
                         ref={countUp => {
@@ -166,16 +166,16 @@ class landingPage extends Component {
                         end={1350}
                       />{' '}
                       $
-                    </h3>
+                    </Typography>
                   </li>
                 </ul>
-                <ul style={{ color: 'gray' }} className="flex-parent row">
+                <ul style={{ color: 'gray', marginTop: '32px' }} className="flex-parent row">
                   <li>
-                    <h3>Route B</h3>
-                    <h3>1820 miles</h3>
+                    <Typography variant="h4">Route B</Typography>
+                    <Typography variant="h4">1820 miles</Typography>
                   </li>
                   <li>
-                    <h3 className="thin">
+                    <Typography variant="h4" className="thin">
                       <CountUp
                         ref={countUp => {
                           this.myCountUp = countUp;
@@ -184,16 +184,16 @@ class landingPage extends Component {
                         end={2025}
                       />{' '}
                       $
-                    </h3>
+                    </Typography>
                   </li>
                 </ul>
-                <ul style={{ color: 'gray' }} className="flex-parent row">
+                <ul style={{ color: 'gray', marginTop: '32px' }} className="flex-parent row">
                   <li>
-                    <h3>Route C</h3>
-                    <h3>1950 miles</h3>
+                    <Typography variant="h4">Route C</Typography>
+                    <Typography variant="h4">1950 miles</Typography>
                   </li>
                   <li>
-                    <h3 className="thin">
+                    <Typography variant="h4" className="thin">
                       <CountUp
                         ref={countUp => {
                           this.myCountUp = countUp;
@@ -202,7 +202,7 @@ class landingPage extends Component {
                         end={2345}
                       />{' '}
                       $
-                    </h3>
+                    </Typography>
                   </li>
                 </ul>
               </div>
@@ -286,7 +286,9 @@ class landingPage extends Component {
                   <img alt="app-logo" src={PhoneApp} />
                 </div>
                 <div>
-                  <h3 className="feature-title">App-based solution</h3>
+                  <Typography variant="h5" className="feature-title">
+                    App-based solution
+                  </Typography>
                 </div>
               </div>
               <div className="grid-child feature">
@@ -294,7 +296,9 @@ class landingPage extends Component {
                   <img alt="saving-logo" src={Saving} />
                 </div>
                 <div>
-                  <h3 className="feature-title">35% operational savings</h3>
+                  <Typography variant="h5" className="feature-title">
+                    35% operational savings
+                  </Typography>
                 </div>
               </div>
               <div className="grid-child feature">
@@ -302,7 +306,9 @@ class landingPage extends Component {
                   <img alt="household-logo" src={House} />
                 </div>
                 <div>
-                  <h3 className="feature-title">Household collection fee reduction </h3>
+                  <Typography variant="h5" className="feature-title">
+                    Household collection fee reduction{' '}
+                  </Typography>
                 </div>
               </div>
               <div className="grid-child feature">
@@ -310,7 +316,9 @@ class landingPage extends Component {
                   <img alt="GHG-logo" src={GHG} />
                 </div>
                 <div>
-                  <h3 className="feature-title">Less green house gases</h3>
+                  <Typography variant="h5" className="feature-title">
+                    Less green house gases
+                  </Typography>
                 </div>
               </div>
               <div className="grid-child feature">
@@ -318,7 +326,9 @@ class landingPage extends Component {
                   <img alt="Approved-logo" src={Scientist} />
                 </div>
                 <div>
-                  <h3 className="feature-title">Solid approved by optimisation scientists</h3>
+                  <Typography variant="h5" className="feature-title">
+                    Solid approved by optimisation scientists
+                  </Typography>
                 </div>
               </div>
               <div className="grid-child feature">
@@ -326,7 +336,9 @@ class landingPage extends Component {
                   <img alt="Dynamic-scheduling" src={Scheduling} />
                 </div>
                 <div>
-                  <h3 className="feature-title">Dynamic scheduling</h3>
+                  <Typography variant="h5" className="feature-title">
+                    Dynamic scheduling
+                  </Typography>
                 </div>
               </div>
             </div>
@@ -365,9 +377,9 @@ class landingPage extends Component {
                       <div className="img-container profile-img">
                         <img alt={profile.name} src={profile.img} />
                       </div>
-                      <div>
-                        <h3 className="team-name">{profile.name}</h3>
-                      </div>
+                      <Typography variant="h6" className="team-name" style={{ marginTop: '16px' }}>
+                        {profile.name}
+                      </Typography>
                     </div>
                   );
                 })}
@@ -382,11 +394,12 @@ class landingPage extends Component {
             <div className="information">
               <div className="information-wrapper">
                 <address>
-                  Klostergatan 10 c/o Base10
-                  <br />
-                  753 21 Uppsala
+                  <Typography variant="h7">Klostergatan 10 c/o Base10</Typography>
+                  <Typography variant="h7">753 21 Uppsala</Typography>
                 </address>
-                <p className="email">hello@omicle.com</p>
+                <Typography variant="h6" className="email" style={{ marginTop: '16px' }}>
+                  hello@omicle.com
+                </Typography>
                 {social && (
                   <div className="social-media">
                     {social.map((soc, i) => {
