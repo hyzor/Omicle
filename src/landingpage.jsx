@@ -404,7 +404,7 @@ class landingPage extends Component {
                   <Typography variant="body1">753 21 Uppsala</Typography>
                 </address>
                 <Typography variant="h6" className="email" style={{ marginTop: '16px' }}>
-                  hello@omicle.com
+                  hello@omicle.se
                 </Typography>
                 {social && (
                   <div className="social-media">
