@@ -278,7 +278,7 @@ class landingPage extends Component {
           </Section>
           <Section className="flex-parent column features" style={{ justifyContent: 'flex-start' }}>
             <Typography variant="h2" style={{ padding: '1em' }}>
-              Omicle Advantages
+              Omicle advantages
             </Typography>
             <div className="grid-parent">
               <div className="grid-child feature ">
