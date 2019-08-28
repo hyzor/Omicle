@@ -373,13 +373,19 @@ class landingPage extends Component {
               <div className="grid-parent">
                 {team.map((profile, i) => {
                   return (
-                    <div key={i} className="grid-child">
+                    <div key={i} className="grid-child" style={{ height: 'auto' }}>
                       <div className="img-container profile-img">
                         <img alt={profile.name} src={profile.img} />
                       </div>
                       <Typography variant="h6" className="team-name" style={{ marginTop: '16px' }}>
                         {profile.name}
                       </Typography>
+                      <Typography variant="subtitle1">{profile.title}</Typography>
+                      {profile.www && (
+                        <Typography variant="subtitle1">
+                          <a href={profile.www}>Website</a>
+                        </Typography>
+                      )}
                     </div>
                   );
                 })}
