@@ -3,8 +3,7 @@ section {
   margin: auto;
 }
 
-
-.standard-section{
+.standard-section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -20,14 +19,14 @@ section {
   margin: 1em;
 }
 
-.grid-parent{
+.grid-parent {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.grid-child{
+.grid-child {
   display: flex;
   flex: 1;
   min-width: 30%;
@@ -38,13 +37,19 @@ section {
   flex-direction: column;
 }
 
-.grid-child.sponsor{
+.grid-child.team {
+  height: 272px;
+  margin-right: 32px;
+  margin-bottom: 16px;
+}
+
+.grid-child.sponsor {
   flex: 1;
   margin: 1em;
   min-width: 200px;
 }
 
-.img-container{
+.img-container {
   height: 45%;
   max-width: 80%;
   width: 80%;
@@ -54,22 +59,23 @@ section {
   display: flex;
 }
 
-.img-container.profile-img{
+.img-container.profile-img {
   border-radius: 50%;
   width: 128px;
   height: 128px;
   overflow: hidden;
+  max-width: 100%;
 }
 
-.img-container.sponsor{
+.img-container.sponsor {
   max-height: 100%;
   max-width: 100%;
 }
 
 .img-container > img {
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .feature {
@@ -78,7 +84,7 @@ section {
 .feature > * {
   flex: 1;
 }
-.logo-container{
+.logo-container {
   flex: 1;
   display: flex;
 }
@@ -88,11 +94,11 @@ section {
   max-height: 64px;
 }
 
-.half-child{
+.half-child {
   flex: 1;
 }
 
-.center{
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,17 +108,16 @@ section {
   height: 128px;
 }
 
-.flex-parent.camo{
+.flex-parent.camo {
   background-image: url(../img/camo.png);
 }
 
-
 @media only screen and (max-width: 600px) {
-  .half-child{
+  .half-child {
     width: 90%;
   }
 
-  .flex-parent.row{
+  .flex-parent.row {
     justify-content: center;
   }
 
@@ -121,16 +126,15 @@ section {
     margin: 0em;
   }
 
-  h1.heading{
+  h1.heading {
     font-size: 2em;
   }
 
-  li > h3{
+  li > h3 {
     line-height: 1em;
   }
 
-  .flex-parent.camo{
+  .flex-parent.camo {
     background-image: url(../img/camoMobile.png);
   }
-
 }

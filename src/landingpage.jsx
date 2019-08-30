@@ -14,6 +14,16 @@ import { SocialIcon } from 'react-social-icons';
 // Material UI
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import FormControl from '@material-ui/core/FormControl';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import InputLabel from '@material-ui/core/InputLabel';
+import Box from '@material-ui/core/Box';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+import Email from './external/smtp';
 
 import Section from './components/section';
 import Footer from './components/footer';
@@ -53,6 +63,10 @@ class landingPage extends Component {
       team: undefined,
       social: undefined,
       scrollTop: true,
+      name: '',
+      email: '',
+      message: '',
+      sendingMail: false,
     };
   }
 
@@ -77,6 +91,31 @@ class landingPage extends Component {
       });
     });
   }
+
+  handleFormChange = name => event => {
+    this.setState({
+      [name]: event.target.value,
+    });
+  };
+
+  handleSend = () => {
+    const { name, email, message } = this.state;
+
+    this.setState({ sendingMail: true });
+
+    Email.send({
+      SecureToken: 'bcf27272-e748-4032-b44c-ee6625c88510',
+      To: 'hello@omicle.se',
+      From: 'contactform@omicle.se',
+      FromName: name,
+      ReplyAddress: email,
+      Subject: `${name} contacted you via omicle.se`,
+      Body: message,
+    }).then(msg => {
+      console.log(msg);
+      this.setState({ name: '', email: '', message: '', sendingMail: false });
+    });
+  };
 
   listenScrollEvent() {
     if (window.scrollY > 50) {
@@ -114,7 +153,7 @@ class landingPage extends Component {
   }
 
   render() {
-    const { scrollTop, partners, team, social } = this.state;
+    const { scrollTop, partners, team, social, name, email, message, sendingMail } = this.state;
 
     return (
       <div className="App">
@@ -374,25 +413,80 @@ class landingPage extends Component {
               <div className="grid-parent">
                 {team.map((profile, i) => {
                   return (
-                    <div key={i} className="grid-child" style={{ height: 'auto' }}>
-                      <div className="img-container profile-img">
-                        <img alt={profile.name} src={profile.img} />
-                      </div>
-                      <Typography variant="h6" className="team-name" style={{ marginTop: '16px' }}>
-                        {profile.name}
-                      </Typography>
-                      <Typography variant="subtitle1">{profile.title}</Typography>
-                      {profile.www && (
-                        <Typography variant="subtitle1">
-                          <a href={profile.www}>Website</a>
-                        </Typography>
-                      )}
-                    </div>
+                    <Card key={i} className="grid-child team" elevation={4}>
+                      <CardActionArea
+                        style={{ height: '100%' }}
+                        onClick={() => {
+                          if (profile.www) {
+                            window.location = profile.www;
+                          }
+                        }}
+                      >
+                        <CardContent>
+                          <div className="img-container profile-img">
+                            <img alt={profile.name} src={profile.img} />
+                          </div>
+                          <Typography
+                            variant="h6"
+                            className="team-name"
+                            style={{ marginTop: '16px' }}
+                          >
+                            {profile.name}
+                          </Typography>
+                          <Typography variant="subtitle1">{profile.title}</Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
                   );
                 })}
               </div>
             </Section>
           )}
+          <Section className="flex-parent column" style={{ minHeight: '70vh' }}>
+            <Typography variant="h2" style={{ marginBottom: '64px' }}>
+              Contact us
+            </Typography>
+            <Box display="flex" flexDirection="column" style={{ width: '360px' }}>
+              <FormControl variant="outlined">
+                <InputLabel htmlFor="component-outlined">Name</InputLabel>
+                <OutlinedInput
+                  id="component-outlined"
+                  value={name}
+                  onChange={this.handleFormChange('name')}
+                />
+              </FormControl>
+              <FormControl variant="outlined" style={{ marginTop: '16px' }}>
+                <InputLabel htmlFor="component-outlined">Email</InputLabel>
+                <OutlinedInput
+                  id="component-outlined"
+                  value={email}
+                  onChange={this.handleFormChange('email')}
+                />
+              </FormControl>
+              <FormControl variant="outlined" style={{ marginTop: '16px' }}>
+                <InputLabel htmlFor="component-outlined">Message</InputLabel>
+                <OutlinedInput
+                  id="component-outlined"
+                  value={message}
+                  onChange={this.handleFormChange('message')}
+                  multiline
+                  rows="6"
+                />
+              </FormControl>
+              {!sendingMail && (
+                <Button
+                  variant="outlined"
+                  onClick={this.handleSend}
+                  style={{ width: '80px', margin: 'auto', marginTop: '16px' }}
+                >
+                  Send
+                </Button>
+              )}
+              {sendingMail && (
+                <CircularProgress size={32} style={{ margin: 'auto', marginTop: '16px' }} />
+              )}
+            </Box>
+          </Section>
           <Footer
             ref={section => {
               this.footerDiv = section;
@@ -404,9 +498,6 @@ class landingPage extends Component {
                   <Typography variant="body1">Klostergatan 10 c/o Base10</Typography>
                   <Typography variant="body1">753 21 Uppsala</Typography>
                 </address>
-                <Typography variant="h6" className="email" style={{ marginTop: '16px' }}>
-                  hello@omicle.se
-                </Typography>
                 {social && (
                   <div className="social-media">
                     {social.map((soc, i) => {
